@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple-Bank</title>
+</head>
+<body>
+  <div id="login-area">
+    <div class="text-center , Welcome"><h1>Welcome to Simple-Bank</h1></div>
+    <div class="form-area">
+        <h4>login</h4>
+        <input type="text" class="form-control" placeholder="email">
+        <br>
+        <input type="password" class="form-control" name="" id="" placeholder="password">
+        <br>
+        <button id="login" class="btn btn-success">Enter</button>
+    </div>
+  </div>
+
+  <div id="transaction-Area">
+   <section>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="deposit status">
+          <h5>Deposit</h5>
+        <h2>$$ <span id="currentDeposit">00</span></h2>
+        </div>
+      </div>
+      <div class=" col-md-4 ">
+      <div class="withdraw  status">
+        <h5>Withdraw</h5>
+        <h2>$$ 00</h2>
+      </div>
+      </div>
+      <div class=" col-md-4 ">
+      <div class="balance  status">
+        <h5>Balance</h5>
+        <h2>$$ 1200</h2>
+      </div>
+      </div>
+    </div>
+   </section>
+ 
+
+
+  <section class="secondPart">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Deposit</h5>
+            <input  type="text"class="form-control" name="" id="depositAmount" placeholder="$$ enter amount">
+            <button id="addDeposit" class="btn btn-success buttonAmont">Deposit</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Withdraw</h5>
+            <input type="text"class="form-control" name="" id="" placeholder="$$ enter amount">
+            <button class="btn btn-success buttonAmont">Withdraw</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+</div>
+  <script>
+    //login button area
+      const loginBtn = document.getElementById("login");
+      loginBtn.addEventListener("click",function() {
+        const loginArea = document.getElementById("login-area").style.display = "none";
+        const transactionArea = document.getElementById("transaction-Area").style.display = "block";
+//loginArea.style.display = "none"
+
+//deposit button 
+        const depositBtn = document.getElementById("addDeposit");
+        depositBtn.addEventListener("click", function() {
+          const depositAmount = document.getElementById("depositAmount").value;
+          const depositNumber = parseFloat(depositAmount);
+
+          const currentDeposit = document.getElementById("currentDeposit").innerText;
+          const currentDepositNumber = parseFloat(currentDeposit);
+          const totalDeposit = depositNumber + currentDepositNumber;
+          document.getElementById("currentDeposit").innerText= totalDeposit;
+
+        })
+
+      })
+  </script>
+</body>
+</html>  

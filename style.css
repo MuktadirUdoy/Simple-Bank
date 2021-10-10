@@ -1,0 +1,52 @@
+body{
+    padding: 150px;
+    
+}
+.Welcome{
+    color: honeydew;
+    background-color: rgb(88, 184, 88);
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(57, 97, 11);
+
+}
+.form-area{
+    
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px rgb(88, 184, 88);
+
+}
+#transaction-Area{
+    display: none;
+}
+
+.balance{
+    background-color:orange;
+    ;
+}
+.withdraw{
+    background-color: lightsalmon;
+}
+
+.deposit{
+    background-color: slateblue;
+}
+.status{
+    color: honeydew;
+    margin: 0 2px;
+    border-radius: 5px;
+    padding: 20px;
+}
+.secondPart{
+    margin-top: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 0px rgb(127, 128, 126);
+
+}
+.buttonAmont{
+    margin-top: 20px;
+    padding: 5px;
+}
